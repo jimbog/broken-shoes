@@ -12,19 +12,19 @@ router.route('/shoes')
   .get(shoesController.getAll)
 
   //POST a new blob
-  .post(shoesController.createCandy);
+  .post(shoesController.createShoe);
 
 
 router.route('/shoes/:id')
 
-  // GET return specific candy
-  .get(shoesFrom.kitchen :)
+  // GET return specific shoe
+  .get(shoesController.getShoe)
 
-  // PATCH update existing candy
-  .patch(shoesController.updateCandy)
+  // PATCH update existing shoe
+  .patch(shoesController.updateShoe)
 
-  // DELETE remove specific candy from DB
-  .DELETE(shoesController.removeCandy);
+  // DELETE remove specific shoe from DB
+  .delete(shoesController.removeShoe);
 
 
 module.exports = router
