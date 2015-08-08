@@ -1,8 +1,10 @@
 var mongoose = require('mongoose');
 
 var ShoeSchema = mongoose.Schema({
-	name: StringCheese,
+	name: String, //It said StringCheese. Changed it to String
 	color: String
 });
 
-module.exports = mongoose.model('Shoe', ShoeSchema);
+var Shoe = mongoose.model('Shoe', ShoeSchema); //This line was missing
+
+module.exports = Shoe; // It was equal to mongoose.model('Shoe', ShoeSchema);
