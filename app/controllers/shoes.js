@@ -6,7 +6,7 @@ function getAll(request, response) {
     if(error) response.json({message: 'Could not find any shoe'});
 
     // response.json({message: shoes});
-    response.render('layout', {shoes: shoes});
+    response.json( {shoes: shoes});
   });
 }
 
