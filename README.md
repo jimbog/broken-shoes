@@ -1,3 +1,9 @@
+### August 10th, 2015 Release Note
+- The seven bugs in the code have been identified and resolved.
+- The app has been tested for full CRUD functionality.
+- The primary debugging was done by Christine & Addison with Sergio providing QA & Project Management.
+
+
 ### Fix an Express app... as a team!
 
 In this independent practice lab, you'll work with your assigned teams to create a working Express application by adding code to an existing project and using Git/GitHub to collaborate. This is meant to give you a little taste of what's to come during your Project 3 work sprint, where you will work with a team which we've selected for you. You have been given most of the app in the starter code.

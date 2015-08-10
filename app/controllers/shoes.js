@@ -1,12 +1,12 @@
 var Shoe = require('../models/Shoe');
 
 // GET
-function getAll(request, response) { 
-  Shoe.find(function(error, shoes) {
+function getAll(request, response) {
+  Shoe.find({},function(error, shoes) {
     if(error) response.json({message: 'Could not find any shoe'});
 
     // response.json({message: shoes});
-    response.render('layout', {shoes: shoes});
+    response.json({'layout': {shoes: shoes}});
   });
 }
 
@@ -20,10 +20,10 @@ function createShoe(request, response) {
   shoe.color = request.body.color;
 
   shoe.save(function(error) {
-    if(error) response.json({messsage: 'Could not ceate shoe b/c:' + error});
+    if(error) response.json({messsage: 'Could not create shoe b/c:' + error});
 
     response.redirect('/shoes');
-  });  
+  });
 }
 
 // GET
@@ -50,7 +50,7 @@ function updateShoe(request, response) {
       if(error) response.json({messsage: 'Could not update shoe b/c:' + error});
 
       response.json({message: 'Shoe successfully updated'});
-    });  
+    });
   });
 }
 
@@ -68,5 +68,6 @@ module.exports = {
   getAll: getAll,
   createShoe: createShoe,
   getShoe: getShoe,
-  updateShoe: updateShoe
-}
+  updateShoe: updateShoe,
+  removeShoe: removeShoe
+};
